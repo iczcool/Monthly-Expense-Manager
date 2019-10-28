@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crud App</title>
+</head>
+<body>
+	<h1>My CRUD App</h1>
+	<table>
+	  <tr>
+	    <th>Expense</th>
+	    <th>Amount</th>
+	    <th>Date Due</th>
+	  </tr>
+	  <tbody id="expenses">
+	  </tbody>
+	</table>
+
+	<div id="update-button" style="display: none;">
+		<h3>Update an expense</h3>
+		<form action="javascript:void(0);" method="POST" id="editForm"> 
+		  <input type="text" id="updateExpense">
+		  <input type="submit" value="Update">
+		</form>
+	</div>
+
+	<h3>Create an expense</h3>
+	<form action="javascript:void(0);" method="POST" onsubmit="createFunc()"> 
+	  <input type="text" id="expense-name" placeholder="Name">
+	  <input type="text" id="expense-amount" placeholder="Amount">
+	  <input type="text" id="expense-date" placeholder="Date">
+	  <input type="submit" value="Create">
+	</form>
+	
+	<h3>Enter your income for the month</h3>
+	<form action="javascript:void(0);" method="POST" onsubmit="calculateExpense()"> 
+	  <input type="text" id="income-name" placeholder="Income">
+	  <input type="submit" value="Send">
+	</form>
+	<h3 id="tot-expense"></h3>
+	<h3 id="income"></h3>
+	<h2 id="balance"></h2>
+
+
+	<div id="test">
+		<input type="submit" id="array-button" value="print array" onclick="mytest()">
+		<p id="myarray"></p>
+	</div>
+	<script type="text/javascript" src="crudApp.js"></script>
+</body>
+</html>
